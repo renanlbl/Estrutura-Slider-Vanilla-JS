@@ -1,0 +1,44 @@
+body, 
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  max-width: 475px;
+}
+
+.container .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  position: absolute;
+  transform: translateX(100%);  
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide.prev {
+  position: absolute;
+  transform: translateX(-100%);  
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s ease-in;
+}
